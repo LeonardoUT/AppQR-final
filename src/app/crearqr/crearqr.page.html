@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">CrearQR de Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div style="text-align: center;">
+    <qr-code [value]="valorQrTexto" 
+        size="300" 
+        errorCorrectionLevel="M" />
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-button expand="block" [routerLink]="['/menuprofesor'] " >Volver</ion-button>
+</ion-footer>

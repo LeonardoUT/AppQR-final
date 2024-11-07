@@ -1,0 +1,85 @@
+.body {
+    --background: rgb(187, 218, 240);
+}
+
+.nav {
+    --background: black;
+    --color: white;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+    background: rgb(187, 218, 240) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-box {
+    width: 350px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    background: rgb(187, 218, 240)
+}
+
+h2 {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.welcome-message {
+    font-size: 1.1em;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    background: rgb(187, 218, 240);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 1em;
+    border-radius: 15px;
+}
+
+ion-icon {
+    font-size: 1.4em;
+    color: white;
+}
+
+.logout-button {
+    width: 100%;
+    height: 40px;
+    background: rgb(187, 218, 240);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}

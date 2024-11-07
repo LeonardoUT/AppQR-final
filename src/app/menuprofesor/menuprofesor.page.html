@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<ion-header>
+  <ion-toolbar class="nav">
+    <ion-title>Perfil Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <div class="logo-container">
+    <img src="assets/images/logoduoc.png" alt="logotipo duoc" class="logo" />
+  </div>
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+</ion-header>
+ 
+  <section>
+    <div class="menu-box">
+      <h2>Bienvenido Profesor</h2>
+      <p class="welcome-message">¿Qué deseas hacer hoy?</p>
+
+      <ion-item button [routerLink]="['/crearqr']" class="menu-item">
+        <ion-icon slot="start" name="qr-code"></ion-icon>
+        <ion-label>Generar Código QR</ion-label>
+      </ion-item>
+
+      <ion-item button [routerLink]="['/asistencia']" class="menu-item">
+        <ion-icon slot="start" name="book"></ion-icon>
+        <ion-label>Asistencia</ion-label>
+      </ion-item>
+
+      <ion-button (click)="salir()" expand="block" class="logout-button">Salir</ion-button>
+    </div>
+  </section>
+</ion-content>

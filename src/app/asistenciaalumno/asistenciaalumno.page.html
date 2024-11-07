@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    
+    <ion-row class="header-row">
+      <ion-col><strong>Curso</strong></ion-col>
+      <ion-col><strong>Fecha</strong></ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let dato of asistenciaData" class="data-row">
+      <ion-col>{{ dato.codigocurso }}</ion-col>
+      <ion-col>{{ dato.fecha }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button routerLink='/menualumno' expand="block" class="logout-button">Volver</ion-button>
+</ion-content>

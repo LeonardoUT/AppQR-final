@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Escanear QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="scannedData">
+    <h3>Información Escaneada</h3>
+    <pre>{{ scannedData | json }}</pre>
+  </div>
+
+  <ion-button routerLink='/menualumno' expand="block" class="logout-button">Volver</ion-button>
+</ion-content>
