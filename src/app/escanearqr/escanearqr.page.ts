@@ -17,7 +17,7 @@ export class EscanearqrPage implements OnInit {
   ngOnInit() { }
 
   ionViewWillEnter() {
-    this.startScan();  // Llama a startScan() automáticamente al entrar en la página
+    this.startScan(); 
   }
 
   async startScan() {
@@ -37,19 +37,21 @@ export class EscanearqrPage implements OnInit {
     BarcodeScanner.stopScan(); 
 
     if (result.hasContent) {
-      try {
-        this.scannedData = JSON.parse(result.content); 
-        console.log('Datos escaneados:', this.scannedData);
-        if (this.scannedData.curso && this.scannedData.fecha) {
-          this.router.navigate(['/alumno'], { queryParams: { curso: this.scannedData.curso, fecha: this.scannedData.fecha } });
-        }
-      } catch (error) {
-        console.error('Error al interpretar JSON:', error);
-        this.scannedData = { content: result.content }; 
+      this.scannedData = JSON.parse(result.content);
+      console.log('Datos escaneados:', this.scannedData);
+
+      // Redirigir si contiene los datos esperados
+      if (this.scannedData.curso && this.scannedData.fecha) {
+        this.router.navigate(['/alumno'], {
+          queryParams: { curso: this.scannedData.curso, fecha: this.scannedData.fecha }
+        });
       }
     } else {
       console.log('No se escaneó ningún contenido');
       alert('No se detectó contenido en el código QR.');
     }
+  } catch (error: any) {
+    console.error('Error durante el escaneo:', error);
+    alert('Hubo un problema al escanear el código. Inténtalo nuevamente.');
   }
 }

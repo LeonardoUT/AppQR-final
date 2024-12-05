@@ -11,7 +11,12 @@
         size="300" 
         errorCorrectionLevel="M" />
   </div>
-
+<div class="informacion-qr">
+    <p><strong>Información del QR:</strong></p>
+    <p>Código del curso: {{ valorQr.codigocurso }}</p>
+    <p>Código del profesor: {{ valorQr.codigoprofesor }}</p>
+    <p>Fecha: {{ valorQr.fecha }}</p>
+</div>
 </ion-content>
 <ion-footer>
   <ion-button expand="block" [routerLink]="['/menuprofesor'] " >Volver</ion-button>

@@ -41,12 +41,5 @@ export class RegistroPage {
 
     this.authService.registerUser(email, password, role);
 
-Swal.fire({
-      icon: 'success',
-      title: 'Usuario registrado',
-      text: `El usuario ha sido registrado como ${role}.`
-    }).then(() => {
-      this.registroForm.reset({ role: 'alumno' });
-    });
   }
 }

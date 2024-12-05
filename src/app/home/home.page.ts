@@ -35,10 +35,9 @@ export class HomePage implements OnInit {
     });
   }
 
-  ngOnInit() {// Crear un usuario admin en el localStorage si no existe
+  ngOnInit() {
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     if (users.length === 0) {
-      // Si no hay usuarios registrados, crea un usuario admin
       this.authService.registerUser('admin@duoc.cl', 'admin123', 'admin');
       console.log('Usuario admin registrado manualmente');
     }}

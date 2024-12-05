@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   <div *ngIf="scannedData">
     <h3>Información Escaneada</h3>
-    <pre>{{ scannedData | json }}</pre>
+    <pre class="informacion-escaneada">{{ scannedData | json }}</pre>
   </div>
 
   <ion-button routerLink='/menualumno' expand="block" class="logout-button">Volver</ion-button>

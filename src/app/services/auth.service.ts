@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -22,9 +21,7 @@ export class AuthService {
     if (user) {
       localStorage.setItem('currentUser', JSON.stringify(user));  
       this.redirectUser(user.role);
-    } else {
-      this.showError();
-    }
+    } 
   }
 
   private redirectUser(role: string) {
@@ -35,14 +32,5 @@ export class AuthService {
     } else if (role === 'alumno') {
       this.router.navigate(['/menualumno']);
     }
-  }
-
-  private showError() {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Correo o Contraseña Errónea!",
-      footer: 'Inténtelo Nuevamente'
-    });
   }
 }

@@ -42,12 +42,11 @@
         <div class="input-box">
           <span class="icon"><ion-icon name="person"></ion-icon></span>
           <ion-select formControlName="role" required>
+            <ion-select-option value="Rol">Elija su Rol</ion-select-option>
             <ion-select-option value="alumno">Alumno</ion-select-option>
             <ion-select-option value="profesor">Profesor</ion-select-option>
           </ion-select>
-          <label>Rol</label>
         </div>
-
         <ion-button expand="block" type="submit" [disabled]="!registroForm.valid">
           Registrar Usuario
         </ion-button>
